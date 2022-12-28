@@ -1,6 +1,8 @@
 return require('packer').startup(function(use)
 	-- Using packer to manage it self
 	
+	use { 'AlphaTechnolog/pywal.nvim', as = 'pywal', config = function() require('pywal').setup() end }
+
 	use 'wbthomason/packer.nvim'
 
 	use 'github/copilot.vim'
@@ -238,12 +240,6 @@ return require('packer').startup(function(use)
 
 
 	-- Theme
-
-	use {
-		'marko-cerovac/material.nvim',
-		config = function()
-		end
-	}
 
 
 	use {
